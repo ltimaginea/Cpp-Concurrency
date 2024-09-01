@@ -1,5 +1,9 @@
 ---
-BasedOnStyle: Google
+BasedOnStyle:  Google
+AlignArrayOfStructures: Left
+AlignConsecutiveMacros: Consecutive
+AlignConsecutiveAssignments: Consecutive
+AlignConsecutiveBitFields: Consecutive
 BreakBeforeBraces: Allman
-ColumnLimit: 100
+ColumnLimit:     100
 ...
