@@ -1,0 +1,5 @@
+add_executable(bounded_blocking_queue_test bounded_blocking_queue_test.cpp)
+target_link_libraries(bounded_blocking_queue_test PRIVATE peace)
+
+add_executable(cyclic_notification_test cyclic_notification_test.cpp)
+target_link_libraries(cyclic_notification_test PRIVATE peace)

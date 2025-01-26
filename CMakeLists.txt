@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.20)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+project(peace LANGUAGES CXX)
+add_library(peace INTERFACE)
+target_compile_features(peace INTERFACE cxx_std_20)
+target_include_directories(peace INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
+
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+find_package(Threads REQUIRED)
+target_link_libraries(peace INTERFACE Threads::Threads)
+
+option(BUILD_TESTS OFF)
+if(BUILD_TESTS)
+  add_subdirectory(peace/concurrency/tests)
+endif()
